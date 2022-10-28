@@ -1,0 +1,20 @@
+name: 워크 1
+on:
+  push:
+    branches:
+      - master
+jobs:
+  hello1:
+    name: 헬로1
+    runs-on: ubuntu-latest
+    steps:
+      - name: sayHi
+        run: echo "Hi"
+      - name: sayMyName
+        run: echo "${{ github.actor }}"
+  makeTagAndRelease:
+    name: 태그와 릴리즈 생성
+    runs-on: ubuntu-latest
+    steps:
+      - name: 체크아웃
+      - uses: actions/checkout@v3
