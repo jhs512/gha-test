@@ -13,6 +13,7 @@ jobs:
       - name: sayMyName
         run: echo "${{ github.actor }}"
   makeTagAndRelease:
+    needs: hello1
     name: 태그와 릴리즈 생성
     runs-on: ubuntu-latest
     steps:
